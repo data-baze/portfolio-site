@@ -7,7 +7,7 @@ const AnimatedText = () => {
     sequence={[
       "Data",
       1000, 
-      "Frontend Developer",
+      "Web Developer",
       1000,
       "Software Developer",
       1000,
