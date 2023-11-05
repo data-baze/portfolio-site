@@ -16,7 +16,7 @@ const HeroSection = () => {
             <AnimatedText/>
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-6">
-          Welcome to my little corner of the internet! 🚀 I'm on a mission to bring some creativity and hone my skills while building amazing and fun web apps.
+          Welcome to my little corner of the internet! 🚀 I&apos;m on a mission to bring some creativity and hone my skills while building amazing and fun web apps.
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 bg-white hover:bg-slate-800 text-white">
