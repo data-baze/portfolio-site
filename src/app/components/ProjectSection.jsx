@@ -54,6 +54,7 @@ const ProjectsData = [
 
 const ProjectSection = () => {
   const [tag, setTag] = useState("All");
+
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
@@ -86,7 +87,7 @@ const ProjectSection = () => {
         />
       </div>
       <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-        {ProjectsData.map((project) => (
+        {filteredProjects.map((project) => (
           <ProjectCard
             key={project.id}
             imgUrl={project.image}
