@@ -21,12 +21,12 @@ module.exports = {
       primary: colors.purple,
       secondary: colors.pink,
     },
-    backgroundColor: {
-      'dark': '#121212', // Dark background color
+
+    backgroundColors: {
+      'dark': '#121212',
+      'white': '#000000'
     },
-    // textColor: {
-    //   'dark': '#ffffff', // Dark text color
-    // },
+    
   },
 
   plugins: [],
