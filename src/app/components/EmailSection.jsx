@@ -29,7 +29,7 @@ const EmailSection = () => {
         const response = await fetch(endpoint, options);
         const resData = await response.json();
         console.log(resData);
-        
+
         if (response.status === 200) {
             console.log('Message sent.');
         }
@@ -113,7 +113,7 @@ const EmailSection = () => {
           </div>
           <button
             type="submit"
-            className="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 px-5  rounded-lg w-full"
+            className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5  rounded-lg w-full"
           >
             Send Message
           </button>
