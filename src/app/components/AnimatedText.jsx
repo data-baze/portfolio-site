@@ -12,7 +12,7 @@ const AnimatedText = () => {
       "Software Developer",
       1000,
       "Looking for new Opportunities",
-      1200,
+      1000,
       "Superhero",
       1000
     ]}

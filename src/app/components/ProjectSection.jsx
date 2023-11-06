@@ -20,7 +20,7 @@ const ProjectsData = [
     description: "Personal portfolio website showcasing my projects ",
     image: "/images/projects/portfolio.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/data-baze/portfolio-site",
     previewUrl: "https://data-portfolio-site.vercel.app/",
   },
   {
