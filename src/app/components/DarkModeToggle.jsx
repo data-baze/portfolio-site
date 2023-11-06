@@ -11,7 +11,7 @@ function DarkModeToggle() {
       {! isDarkMode ? (
         <button
           id="darkmode"
-          onClick={() => setIsDarkMode(true)}
+          onClick={() => setIsDarkMode(false)}
           className={`flex items-center px-3 py-2 border rounded text-slate-200 border-slate-200 hover:text-white hover:border-white bg-${
             isDarkMode ? "dark" : "white"
           } text-${isDarkMode ? "white" : "black"}`}
@@ -21,7 +21,7 @@ function DarkModeToggle() {
       ) : (
         <button
           id="darkmode"
-          onClick={() => setIsDarkMode(false)}
+          onClick={() => setIsDarkMode(true)}
           className={`flex items-center px-3 py-2 border rounded text-slate-200 border-slate-200 hover:text-white hover:border-white bg-${
             isDarkMode ? "dark" : "white"
           } text-${isDarkMode ? "white" : "black"}`}
