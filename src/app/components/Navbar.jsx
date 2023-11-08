@@ -34,8 +34,8 @@ const Navbar = () => {
       <Image
               src="/images/iconx.png"
               alt=" welcome Image"
-              height={50}
-              width={50}
+              height={35}
+              width={35}
               className=" bg-transparent"
             />
         <div className="block md:hidden">
