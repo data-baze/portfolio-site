@@ -4,7 +4,7 @@ import Link from "next/link";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
-import DarkModeToggle from "./DarkModeToggle";
+import Image from "next/image";
 
 const navLinks = [
   {
@@ -31,7 +31,13 @@ const Navbar = () => {
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90">
       <div className="flex flex-wrap items-center justify-between lg:py-4 mx-auto p-8">
-        <DarkModeToggle />
+      <Image
+              src="/images/iconx.png"
+              alt=" welcome Image"
+              height={50}
+              width={50}
+              className=" bg-transparent"
+            />
         <div className="block md:hidden">
           {!navbarOpen ? (
             <button
