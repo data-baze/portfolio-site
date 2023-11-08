@@ -4,14 +4,14 @@ import { useState } from "react";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
 function DarkModeToggle() {
-  const [isDarkMode, setIsDarkMode] = useState(false); // Set to true by default
+  const [isDarkMode, setIsDarkMode] = useState(true); // Set to true by default
 
   return (
     <div className="block">
-      {! isDarkMode ? (
+      { ! isDarkMode ? (
         <button
           id="darkmode"
-          onClick={() => setIsDarkMode(false)}
+          onClick={() => setIsDarkMode(true)}
           className={`flex items-center px-3 py-2 border rounded text-slate-200 border-slate-200 hover:text-white hover:border-white bg-${
             isDarkMode ? "dark" : "white"
           } text-${isDarkMode ? "white" : "black"}`}
@@ -21,10 +21,10 @@ function DarkModeToggle() {
       ) : (
         <button
           id="darkmode"
-          onClick={() => setIsDarkMode(true)}
+          onClick={() => setIsDarkMode(false)}
           className={`flex items-center px-3 py-2 border rounded text-slate-200 border-slate-200 hover:text-white hover:border-white bg-${
             isDarkMode ? "dark" : "white"
-          } text-${isDarkMode ? "white" : "black"}`}
+          } text-${isDarkMode ? "dark" : "white"}`}
         >
           <SunIcon className="h-5 w-5" />
         </button>

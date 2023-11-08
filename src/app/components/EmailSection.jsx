@@ -1,39 +1,38 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import GithubIcon from "../../../public/github.svg";
 import LinkedinIcon from "../../../public/linkedin.svg";
 import Link from "next/link";
 import Image from "next/image";
 
 const EmailSection = () => {
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const data = {
-            email: e.target.email.value,
-            subject: e.target.subject.value,
-            message: e.target.message.value,
-        }
-        const JSONdata = JSON.stringify(data);
-        const endpoint = "/api/send";
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-        const options = {
-             method: 'POST',
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
 
-             headers: {
-                'Content-Type': 'application',
-             },
+    formData.append("access_key", "0953b090-417e-4f1c-8386-f4519e8fabe4");
 
-            body: JSONdata, 
-        }
-        
-        const response = await fetch(endpoint, options);
-        const resData = await response.json();
-        console.log(resData);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
-        if (response.status === 200) {
-            console.log('Message sent.');
-        }
-    };
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    });
+    const result = await response.json();
+    if (result.success) {
+      e.preventDefault();
+      console.log(result);
+      setEmailSubmitted(true);
+    }
+  }
+
   return (
     <section className=" grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 ">
       <div>
@@ -64,7 +63,32 @@ const EmailSection = () => {
       </div>
 
       <div>
-        <form className=" flex flex-col " onSubmit={handleSubmit}>
+        <form
+          className=" flex flex-col "
+          onSubmit={handleSubmit}
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="0953b090-417e-4f1c-8386-f4519e8fabe4"
+          />
+          <div className="mb-6">
+            <label
+              htmlFor="name"
+              className=" text-white block mb-2 text-sm font-medium "
+            >
+              Full Name
+            </label>
+            <input
+              className="bg-[#18191E] border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              type="text"
+              name="name"
+              required
+              placeholder="Enter your name"
+            />
+          </div>
           <div className="mb-6">
             <label
               htmlFor="email"
@@ -117,6 +141,12 @@ const EmailSection = () => {
           >
             Send Message
           </button>
+
+          {emailSubmitted && (
+            <p className="text-green-500 text-sm mt-2">
+              Email sent successfully!
+            </p>
+          )}
         </form>
       </div>
     </section>

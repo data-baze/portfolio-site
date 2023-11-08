@@ -24,8 +24,10 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>University of Abuja, Abuja </li>
-        <li>Edo State Polytechnic, Usen </li>
+        <li>University of Abuja, Abuja
+          <p className="text-[#ADB7BE]">B.Sc Computer Science</p> </li>
+        <li className="mt-2">Edo State Polytechnic, Usen 
+        <p className="text-[#ADB7BE]">Diploma Computer Science</p> </li>
       </ul>
     ),
   },
@@ -35,7 +37,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>The Ultimate 2022 Fullstack Web Development Bootcamp, UDEMY </li>
-        <li>
+        <li className="mt-2">
           Node Js – The Complete Guide (MVC, REST APIs, GRAPHQL, DENO), UDEMY
         </li>
       </ul>
@@ -54,9 +56,9 @@ const AboutSection = () => {
   };
 
   return (
-    <section className=" text-white">
+    <section className=" text-white ">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" alt="about image" width={500} height={600} />
+        <Image src="/images/about-images.png" alt="about image" width={500} height={600} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-3xl font-bold text-white mt-2 mb-2">About Me</h2>
           <p className="text-base lg:text-lg">
