@@ -1,12 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import GithubIcon from "../../../public/github.svg";
 import LinkedinIcon from "../../../public/linkedin.svg";
 import Link from "next/link";
 import Image from "next/image";
 
 const EmailSection = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -27,9 +26,7 @@ const EmailSection = () => {
     });
     const result = await response.json();
     if (result.success) {
-      e.preventDefault();
       console.log(result);
-      setEmailSubmitted(true);
     }
   }
 
@@ -141,12 +138,6 @@ const EmailSection = () => {
           >
             Send Message
           </button>
-
-          {emailSubmitted && (
-            <p className="text-green-500 text-sm mt-2">
-              Email sent successfully!
-            </p>
-          )}
         </form>
       </div>
     </section>

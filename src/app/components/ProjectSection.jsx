@@ -19,7 +19,7 @@ const ProjectsData = [
     id: 2,
     title: "Nextjs Portfolio Website",
     description: "Personal portfolio website showcasing my projects ",
-    image: "/images/projects/portfolio.png",
+    image: "/images/projects/portfolio-x.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/data-baze/portfolio-site",
     previewUrl: "https://data-portfolio-site.vercel.app/",
