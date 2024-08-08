@@ -62,8 +62,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-3xl font-bold text-white mt-2 mb-2">About Me</h2>
           <p className="text-base lg:text-lg">
-          I&apos;m a versatile web developer with expertise in Next.js, React, and Node.js. I excel in front-end technologies like Tailwind CSS and Bootstrap, crafting interactive and responsive interfaces. Proficient in JavaScript, jQuery, and database management (PostgresSQL), with backend capabilities in Python and Django. Git and CLI are second nature. Eager to contribute to web development projects with a passion for technology and quality solutions.
-          </p>
+          I&apos;m a versatile software developer with expertise in Next.js, React, and Node.js. I use styling technologies like Tailwind CSS, Chakra UI, and Bootstrap for crafting interactive and responsive interfaces and Redux Tool Kit for state management. I am proficient in JavaScript, Typescript, jQuery, database management (PostgresSQL) and RESTful API's, with backend capabilities in Python and Django. I am well versed In Git and CLI as well as Postman and Swagger for API consumption. Eager to contribute to software development projects with a passion for technology and quality solutions   </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
