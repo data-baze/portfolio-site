@@ -9,9 +9,11 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        <li>JavaScript</li>
+        <li>TypeScript</li>
         <li>React</li>
         <li>Next js</li>
-        <li>JavaScript</li>
+        <li>Redux</li>
         <li>Python</li>
         <li>Django</li>
         <li>Node.js</li>
@@ -36,10 +38,19 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>The Ultimate 2022 Fullstack Web Development Bootcamp, UDEMY </li>
+          <li className="mt-2">
+       AWS Cloud Technical Essentials - AWS, Coursera
+          </li>
         <li className="mt-2">
+        Introduction to Containers – Docker, Kubernetes and OpenShift - IBM, Coursera
+          </li>
+         <li className="mt-2">
+         Django Application Development with SQL and Databases – IBM, Coursera
+        </li>
+         <li className="mt-2">
           Node Js – The Complete Guide (MVC, REST APIs, GRAPHQL, DENO), UDEMY
         </li>
+        <li className="mt-2">The Ultimate 2022 Fullstack Web Development Bootcamp, UDEMY </li>
       </ul>
     ),
   },
