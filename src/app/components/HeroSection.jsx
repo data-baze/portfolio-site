@@ -26,7 +26,7 @@ const HeroSection = () => {
             Welcome to my little corner of the internet! 🚀
           </p>
           <div>
-            <Link href="/Bassey Data ResumeX.pdf">
+            <Link href="/resume-me.pdf">
               <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 bg-white hover:bg-slate-800 text-white">
                 Download CV
               </button>
